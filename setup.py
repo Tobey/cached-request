@@ -7,9 +7,9 @@ if sys.version_info < (3, 6, 1):
     sys.exit('Python < 3.6.1 is not supported')
 
 setup(
-    name='uenihttp',
+    name='ueniapi',
     version='0.0.1',
-    packages=['uenihttp'],
+    packages=['ueniapi'],
     url='',
     license='UENI Internal',
     author='tobey',

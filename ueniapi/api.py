@@ -26,15 +26,17 @@ class Client:
             token, request_uri, user_agent, cache_request, cache_expires, **kwargs
         )
 
-    def get(self, endpoint, params=None):
+    def get(self, endpoint, params=None, **kwargs):
         return self.session.get(
                 endpoint,
-                params=params
+                params=params,
+                ** kwargs
         )
 
-    def post(self,endpoint, params=None, data=None):
+    def post(self,endpoint, params=None, data=None, **kwargs):
         return self.session.post(
                 endpoint,
                 params=params,
-                data=data
+                data=data,
+                ** kwargs
         )
