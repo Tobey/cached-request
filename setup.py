@@ -3,8 +3,8 @@ import sys
 from setuptools import setup
 
 
-if sys.version_info < (3, 6, 1):
-    sys.exit('Python < 3.6.1 is not supported')
+if sys.version_info < (2, 7, 0)
+    sys.exit('Python < 2.7.0 is not supported')
 
 setup(
     name='ueniapi',
