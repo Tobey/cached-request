@@ -21,9 +21,12 @@ class HTTPSession(requests.Session):
 
         if cache_request:
             requests_cache.install_cache()
+        if not request_uri:
+            raise UeniAPIError('request_uri is required')
 
-        trailing_slash = request_uri.endswith("/")
-        self.request_uri = f'{request_uri}{"/" if  not trailing_slash else ""}'
+        if not request_uri.endswith("/"):
+            request_uri = f'{request_uri}/'
+        self.request_uri = request_uri
         self.headers = {
             f'{auth_header}': f'{auth_prefix}{token}',
             'User-Agent': user_agent,

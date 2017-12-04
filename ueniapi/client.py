@@ -6,7 +6,7 @@ class Client:
     def __init__(
             self,
             token=None,
-            request_uri=settings.USER_AGENT,
+            request_uri=settings.REQUEST_URI,
             user_agent=settings.USER_AGENT,
             cache_request=settings.CACHE_REQUESTS,
             cache_expires=settings.CACHE_EXPIRES,
