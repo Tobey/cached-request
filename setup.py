@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='ueniapi',
-    version='0.0.1',
+    version='0.0.2',
     packages=['ueniapi'],
     url='',
     license='UENI Internal',
@@ -12,7 +12,7 @@ setup(
     author_email='tobey@ueni.com',
     description='',
     install_requires=[
-        'requests==2.18.2',
-        'requests-cache==0.4.13',
+        'requests>=2.18.2',
+        'requests-cache>=0.4.13',
     ]
 )
